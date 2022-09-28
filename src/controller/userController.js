@@ -91,8 +91,6 @@ const login = async function (req, res) {
             let finalData = {
                 token: token,
                 userId: user._id.toString(),
-                iat: Date.now().getTime() ,
-                exp: Date.now()  + 60*60*24
             }    
 
             return res.status(200).send({ status: true, meessage: "Success", data: finalData })
